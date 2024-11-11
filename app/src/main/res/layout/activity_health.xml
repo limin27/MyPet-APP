@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Beige">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="411dp"
+        android:layout_height="68dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/LightBrown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="openDashboard"
+            android:src="@drawable/navlogo"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/gagalin"
+            android:text="MY PET"
+            android:textColor="#fff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnFeedback"
+            android:layout_width="52dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/feedback"
+            android:onClick="openFeedback"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="52dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile"
+            android:onClick="openProfile"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnPhone"
+            android:layout_width="54dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="225dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/phone"
+            android:onClick="openEmergency"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Existing RelativeLayout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="254dp"
+                android:background="@drawable/border1"
+                android:layout_marginTop="80dp">
+
+                <!-- Existing Views within RelativeLayout -->
+
+                <TextView
+                    android:id="@+id/VETERINARY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="V E T E R I N A R Y"
+                    android:fontFamily="@font/gagalin"
+                    android:textColor="@color/Brown"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="76dp"
+                    android:layout_height="74dp"
+                    android:layout_below="@+id/VETERINARY"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/veterinary1" />
+
+                <TextView
+                    android:id="@+id/JACQUELINE"
+                    android:layout_width="170dp"
+                    android:layout_height="37dp"
+                    android:layout_below="@id/VETERINARY"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@+id/imageView"
+                    android:text="JACQUELINE"
+                    android:fontFamily="@font/georgia"
+                    android:textColor="@color/Brown"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/JACQUELINE"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="-7dp"
+                    android:layout_toRightOf="@+id/imageView"
+                    android:text="MON-WED 9A.M-6P.M"
+                    android:fontFamily="@font/georgia"
+                    android:textColor="@color/Brown"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="76dp"
+                    android:layout_height="74dp"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/veterinary2" />
+
+                <TextView
+                    android:id="@+id/LILYKIM"
+                    android:layout_width="170dp"
+                    android:layout_height="37dp"
+                    android:layout_below="@id/time"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:text="LILY KIM"
+                    android:fontFamily="@font/georgia"
+                    android:textColor="@color/Brown"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/time2"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/LILYKIM"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="-7dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:text="MON-WED 9A.M-6P.M"
+                    android:fontFamily="@font/georgia"
+                    android:textColor="@color/Brown"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+
+            </RelativeLayout>
+
+            <!-- New Section Below the RelativeLayout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border1">
+
+                <TextView
+                    android:id="@+id/medication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="M E D I C A T I O N"
+                    android:fontFamily="@font/gagalin"
+                    android:textColor="@color/Brown"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/btnAddMedication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_text"
+                    android:layout_marginLeft="-114dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/medication"
+                    android:text="ADD"
+                    android:fontFamily="@font/georgia"
+                    android:textColor="@color/Brown"
+                    android:textStyle="bold"/>
+
+
+
+                <TextView
+                    android:id="@+id/no_medication_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/medication"
+                    android:layout_centerInParent="true"
+                    android:text="No Medication"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/medication_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/medication"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp" />
+
+                <!-- Add more views here for the new section as needed -->
+
+            </RelativeLayout>
+
+            <!-- New Section Below the RelativeLayout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border1">
+
+                <TextView
+                    android:id="@+id/vaccination"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="V A C C I N A T I O N"
+                    android:fontFamily="@font/gagalin"
+                    android:textColor="@color/Brown"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/btnAddVaccination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_text"
+                    android:layout_marginLeft="-114dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/vaccination"
+                    android:text="ADD"
+                    android:fontFamily="@font/georgia"
+                    android:textColor="@color/Brown"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/no_vaccination_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/vaccination"
+                    android:layout_centerInParent="true"
+                    android:text="No Vaccination"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/vaccination_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/vaccination"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp" />
+
+                <!-- Add more views here for the new section as needed -->
+
+            </RelativeLayout>
+
+            <!-- New Section Below the RelativeLayout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border1">
+
+                <TextView
+                    android:id="@+id/reminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="R E M I N D E R"
+                    android:fontFamily="@font/gagalin"
+                    android:textColor="@color/Brown"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/btnAddReminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_text"
+                    android:layout_marginLeft="-114dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/reminder"
+                    android:text="ADD"
+                    android:fontFamily="@font/georgia"
+                    android:textColor="@color/Brown"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/no_reminder_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/reminder"
+                    android:text="No Reminder"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reminder_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/reminder"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp" />
+
+                <!-- Add more views here for the new section as needed -->
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

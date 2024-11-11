@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VeterinarianAppointment"
+    android:background="@color/Beige">
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottomNavigationView"
+      android:layout_width="411dp"
+      android:layout_height="68dp"
+      android:layout_centerHorizontal="true"
+      android:background="@color/LightBrown"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:onClick="openDashboard"
+        android:src="@drawable/navlogo"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/gagalin"
+        android:text="MY PET"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnFeedback"
+        android:layout_width="52dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/feedback"
+        android:onClick="openFeedback"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnProfile"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/profile"
+        android:onClick="openProfile"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPhone"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/phone"
+        android:onClick="openEmergency"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+  </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+  <TextView
+      android:id="@+id/textView5"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/gagalin"
+      android:text="Y O U R   P E T"
+      android:layout_centerHorizontal="true"
+      android:textAlignment="center"
+      android:textColor="@color/Brown"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      android:layout_marginTop="30dp"
+      android:layout_below="@+id/bottomNavigationView"/>
+
+  <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_below="@id/textView5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <ImageButton
+          android:id="@+id/add_pet"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:background="@color/Beige"
+          android:contentDescription="Add a new pet"
+          android:src="@drawable/add"
+          android:visibility="visible" />
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/pet_recycler_view"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginLeft="24dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginRight="24dp" />
+
+      <!-- Add more views here for the new section as needed -->
+
+    </RelativeLayout>
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/appointment_groomingText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/georgia"
+      android:text="VETERINARIAN APPOINTMENT"
+      android:textAlignment="center"
+      android:textColor="@color/Brown"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      android:layout_below="@+id/linearLayout"/>
+
+  <Button
+      android:id="@+id/showDateBtn"
+      android:layout_width="310dp"
+      android:layout_height="40dp"
+      android:layout_below="@+id/appointment_groomingText"
+      android:layout_centerInParent="true"
+      android:layout_marginTop="15dp"
+      android:background="@drawable/round_text"
+      android:fontFamily="@font/georgia"
+      android:text="Date"
+      android:textColor="@color/Brown"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+  <Button
+      android:id="@+id/showTimeBtn"
+      android:layout_width="310dp"
+      android:layout_height="40dp"
+      android:layout_below="@+id/showDateBtn"
+      android:layout_centerInParent="true"
+      android:layout_marginTop="15dp"
+      android:background="@drawable/round_text"
+      android:fontFamily="@font/georgia"
+      android:text="Time"
+      android:textColor="@color/Brown"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+  <Spinner
+      android:id="@+id/veterinarySpinner"
+      android:layout_width="310dp"
+      android:layout_height="40dp"
+      android:layout_below="@+id/showTimeBtn"
+      android:layout_centerInParent="true"
+      android:layout_marginTop="15dp"
+      android:background="@drawable/round_text"
+      android:padding="10dp"
+      android:popupBackground="@color/Beige"
+      android:spinnerMode="dropdown" />
+
+  <Button
+      android:id="@+id/btnConfirm"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:background="@drawable/round_btn"
+      android:fontFamily="@font/georgia"
+      android:text="C O N F I R M"
+      android:textColor="#fff"
+      android:textSize="20dp"
+      android:textStyle="bold"
+      android:layout_below="@+id/veterinarySpinner"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="25dp" />
+
+  <Button
+      android:id="@+id/btnHistory"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:background="@drawable/round_btn"
+      android:fontFamily="@font/georgia"
+      android:text="H I S T O R Y"
+      android:textColor="#fff"
+      android:textSize="20dp"
+      android:textStyle="bold"
+      android:layout_below="@+id/btnConfirm"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp" />
+</RelativeLayout>

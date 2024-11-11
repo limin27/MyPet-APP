@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".emergency"
+    android:background="@color/Beige">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="411dp"
+        android:layout_height="68dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/LightBrown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="openDashboard"
+            android:src="@drawable/navlogo"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/gagalin"
+            android:text="MY PET"
+            android:textColor="#fff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnFeedback"
+            android:layout_width="52dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/feedback"
+            android:onClick="openFeedback"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="52dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile"
+            android:onClick="openProfile"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnPhone"
+            android:layout_width="54dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="225dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/phone"
+            android:onClick="openEmergency"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/contactBtn"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/contact" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+        <TextView
+            android:id="@+id/ContactTitle"
+            android:layout_width="250dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gagalin"
+            android:text="Emergency contact number"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Brown"
+            android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/contactSmallTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/georgia"
+                android:text="011-12724482"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/Brown"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+    </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/addressImage"
+                android:layout_marginLeft="5dp"
+                android:layout_width="85dp"
+                android:layout_height="100dp"
+                android:background="@drawable/location"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/addressTitle"
+                    android:layout_width="250dp"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gagalin"
+                    android:text="Address"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/Brown"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/addressSmallTitle"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/georgia"
+                    android:text="Jalan melor 18, Taman Melor, Kuala Pahang, 26600 pekan, Pahang"
+                    android:textAlignment="center"
+                    android:textColor="@color/Brown"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/hintImage"
+                android:layout_marginLeft="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/hint"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/hintTitle"
+                    android:layout_width="250dp"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gagalin"
+                    android:text="First aid tips"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/Brown"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/hintSmallTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/georgia"
+                    android:text="WOUND CARE"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/Brown"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hintSmallTitle1"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/georgia"
+                    android:text="Apply pressure with a clean cloth to stop bleeding. If there is debris, flush the wound with saline or clean water."
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/Brown"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/view_btn"
+                    android:layout_width="165dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/round_btn"
+                    android:backgroundTint="@color/LightBrown"
+                    android:fontFamily="@font/georgia"
+                    android:text="V i e w  M O R E"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

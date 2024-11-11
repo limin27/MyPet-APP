@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CD21059 Final Assignment</string>
+
+    <string-array name="services_array">
+        <item>BATH</item>
+        <item>TRIM</item>
+        <item>FULL HAIRCUT</item>
+    </string-array>
+
+    <string-array name="veterinary_array">
+        <item>Dr. Goh Zhi Yuan</item>
+        <item>Dr. Nor Malinda</item>
+        <item>Dr. Tan Khai Jie</item>
+    </string-array>
+</resources>

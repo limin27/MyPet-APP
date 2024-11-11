@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UploadProfilePic"
+    android:background="@color/Beige">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="411dp"
+        android:layout_height="68dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/LightBrown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="openDashboard"
+            android:src="@drawable/navlogo"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/gagalin"
+            android:text="MY PET"
+            android:textColor="#fff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnFeedback"
+            android:layout_width="52dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/feedback"
+            android:onClick="openFeedback"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="52dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile"
+            android:onClick="openProfile"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnPhone"
+            android:layout_width="54dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="225dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/phone"
+            android:onClick="openEmergency"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp">
+
+        <TextView
+            android:id="@+id/upload_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gagalin"
+            android:text="Upload your picture"
+            android:textColor="@color/Brown"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/chooseBtn"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_header"
+            android:background="@drawable/round_btn"
+            android:backgroundTint="@color/LightBrown"
+            android:fontFamily="@font/georgia"
+            android:text="C h o o s e    P i c t u r e"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/imageViewProfile"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_text"
+            android:layout_below="@id/chooseBtn"/>
+
+        <Button
+            android:id="@+id/uploadBtn"
+            android:layout_width="145dp"
+            android:layout_height="48dp"
+            android:background="@drawable/round_btn"
+            android:backgroundTint="@color/LightBrown"
+            android:fontFamily="@font/georgia"
+            android:text="U p l o a d"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:layout_below="@+id/imageViewProfile"
+            android:layout_centerHorizontal="true"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+        </RelativeLayout>
+
+</RelativeLayout>

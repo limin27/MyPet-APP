@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nutrition"
+    android:background="@color/Beige">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="411dp"
+        android:layout_height="68dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/LightBrown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="openDashboard"
+            android:src="@drawable/navlogo"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/gagalin"
+            android:text="MY PET"
+            android:textColor="#fff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnFeedback"
+            android:layout_width="52dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/feedback"
+            android:onClick="openFeedback"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="52dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile"
+            android:onClick="openProfile"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnPhone"
+            android:layout_width="54dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="225dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/phone"
+            android:onClick="openEmergency"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="257dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/gagalin"
+        android:text="N U T R I T I O N"
+        android:textAlignment="center"
+        android:textColor="@color/Brown"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView" />
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="585dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="350dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/round_text" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="350dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:srcCompat="@drawable/round_text" />
+
+            <ImageButton
+                android:id="@+id/btnAddFood"
+                android:layout_width="70dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="66dp"
+                android:background="@drawable/screenshot_2024_06_08_005042"
+                android:onClick="addFood"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.86"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/newFeedback"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="250dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/gagalin"
+                android:text="F O O D  S C H E D U L E"
+                android:textColor="@color/Brown"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.335"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/newNutrition2"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="339dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/gagalin"
+                android:letterSpacing="0.03"
+                android:text="HOMEMADE PET TREAT RECIPES"
+                android:textAlignment="center"
+                android:textColor="@color/Brown"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/foodList"
+                android:layout_width="310dp"
+                android:layout_height="155dp"
+                android:layout_marginTop="105dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/textAddFood"
+                android:layout_width="240dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/georgia"
+                android:hint="Write any food schedule"
+                android:inputType="text"
+                android:textColor="@color/Brown"
+                android:textColorHint="#4D824F2B"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.29"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="315dp"
+                android:layout_height="210dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.85">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/websiteFood1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/georgia"
+                        android:onClick="openWebsite1"
+                        android:padding="7dp"
+                        android:text="Easy Homemade Dog Treats"
+                        android:textColor="@color/Brown"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/websiteFood2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/georgia"
+                        android:onClick="openWebsite2"
+                        android:padding="7dp"
+                        android:text="Healthy Homemade Dog Treats"
+                        android:textColor="@color/Brown"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/websiteFood3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/georgia"
+                        android:onClick="openWebsite3"
+                        android:padding="7dp"
+                        android:text="Easy Homemade Cat Treats"
+                        android:textColor="@color/Brown"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/websiteFood4"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/georgia"
+                        android:onClick="openWebsite4"
+                        android:padding="7dp"
+                        android:text="Homemade Tuna Cat Treats"
+                        android:textColor="@color/Brown"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/websiteFood5"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/georgia"
+                        android:onClick="openWebsite5"
+                        android:padding="7dp"
+                        android:text="Top 3 Homemade Rabbit Treats"
+                        android:textColor="@color/Brown"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/websiteFood6"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/georgia"
+                        android:onClick="openWebsite6"
+                        android:padding="7dp"
+                        android:text="10 Best Homemade Hamster Treats"
+                        android:textColor="@color/Brown"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ImageButton
+                android:id="@+id/btnInfo"
+                android:layout_width="53dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.88"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView3"
+                app:srcCompat="@drawable/icons8_info_64" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

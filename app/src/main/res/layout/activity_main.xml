@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/Beige">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ss"
+        android:layout_gravity="center"
+        android:layout_marginTop="285dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="350dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gagalin"
+        android:text="MY PET"
+        android:textColor="@color/Brown"
+        android:layout_gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/smallTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/georgia"
+        android:text="P E T  C A R E  S E R V I C E S"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/Brown"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

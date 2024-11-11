@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register"
+    android:background="@color/Beige">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="350dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gagalin"
+        android:text="R E G I S T E R"
+        android:layout_marginTop="85dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/Brown"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_below="@+id/title"
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:inputType="text"
+        android:layout_height="55dp"
+        android:background="@drawable/round_text"
+        android:hint="U S E R N A M E"
+        android:textAlignment="center"
+        android:textColorHint="@color/Brown"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_below="@+id/username"
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:inputType="textEmailAddress"
+        android:layout_height="55dp"
+        android:textAlignment="center"
+        android:background="@drawable/round_text"
+        android:hint="E M A I L"
+        android:textColorHint="@color/Brown"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_below="@+id/email"
+        android:id="@+id/phoneNo"
+        android:layout_width="300dp"
+        android:inputType="number"
+        android:layout_height="55dp"
+        android:background="@drawable/round_text"
+        android:hint="P H O N E   N O"
+        android:textAlignment="center"
+        android:textColorHint="@color/Brown"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_below="@+id/phoneNo"
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_text"
+        android:hint="P A S S W O R D"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/Brown"
+        android:textSize="22sp"/>
+
+    <Button
+        android:layout_below="@+id/password"
+        android:id="@+id/registerBtn"
+        android:layout_width="175dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="@color/LightBrown"
+        android:text="S i g n   U p"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_below="@+id/registerBtn"
+        android:id="@+id/loginBtn"
+        android:layout_width="205dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Already an user? Login"
+        android:onClick="openLogin"
+        android:textAlignment="center"
+        android:textColor="@color/Brown"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:elevation="10dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

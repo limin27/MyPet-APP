@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:layout_marginTop="200dp">
+
+    <EditText
+        android:id="@+id/edit_recording_name"
+        android:layout_width="387dp"
+        android:layout_height="66dp"
+        android:hint="Enter Recording Name" />
+
+    <ImageButton
+        android:id="@+id/btnStartRecording"
+        android:layout_width="63dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/edit_recording_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="start_play"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/play" />
+
+
+    <ImageButton
+        android:id="@+id/btnStopRecording"
+        android:layout_width="58dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/edit_recording_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="146dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/btnStartRecording"
+        android:contentDescription="stop_recording"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/stop" />
+
+    <Button
+        android:id="@+id/save_reminder_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:layout_below="@id/btnStartRecording"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+
+</RelativeLayout>
